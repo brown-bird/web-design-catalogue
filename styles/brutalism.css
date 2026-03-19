@@ -1,0 +1,244 @@
+/* ============================================================
+   BRUTALISM — Detail Page Stylesheet
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: #fff;
+  color: #000;
+  padding-top: 44px;
+}
+
+/* ── Back Nav ── */
+.back-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 44px;
+  background: #FFFF00;
+  border-bottom: 3px solid #000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+}
+.back-nav a { color: #000; text-decoration: none; }
+.back-nav a:hover { text-decoration: underline; }
+.back-nav-count { color: #888; }
+
+/* ── Hero ── */
+.hero {
+  border-bottom: 3px solid #000;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  min-height: 55vh;
+}
+.hero-main {
+  padding: 56px 48px;
+  border-right: 3px solid #000;
+}
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.25em; color: #999;
+  text-transform: uppercase; margin-bottom: 20px;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(80px, 13vw, 180px);
+  line-height: 0.88;
+  margin-bottom: 24px;
+}
+.hero-tagline {
+  font-size: 12px; letter-spacing: 0.2em; color: #FF0000;
+  text-transform: uppercase;
+}
+.hero-side {
+  padding: 56px 40px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.hero-era-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px; color: #f0f0f0; line-height: 1;
+}
+.hero-era-label {
+  font-size: 11px; letter-spacing: 0.15em;
+  border-top: 3px solid #000; padding-top: 8px; margin-top: 8px;
+}
+.hero-desc {
+  font-size: 14px; line-height: 1.7; color: #444; max-width: 200px;
+}
+
+/* ── About ── */
+.about {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  border-bottom: 3px solid #000;
+}
+.about-sidebar {
+  padding: 48px 0 48px 28px;
+  font-size: 11px; writing-mode: vertical-rl;
+  border-right: 3px solid #000; color: #999;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+.about-content { padding: 48px; }
+.about-content p {
+  font-size: 15px; line-height: 1.75; margin-bottom: 16px; max-width: 680px;
+}
+.about-content p:last-child { margin-bottom: 0; }
+
+/* ── Section header pattern ── */
+.section-header {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px; margin-bottom: 32px;
+  border-bottom: 3px solid #000; padding-bottom: 16px;
+}
+
+/* ── Characteristics ── */
+.chars-section { padding: 48px; border-bottom: 3px solid #000; }
+.chars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.char-item {
+  padding: 16px 18px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+  border: 1.5px solid #000;
+  margin: -1px 0 0 -1px;
+}
+.char-item:nth-child(odd) { background: #000; color: #fff; }
+.char-item:nth-child(3n) { background: #FF0000; color: #fff; }
+.char-item:nth-child(7) { background: #FFFF00; color: #000; }
+
+/* ── Palette ── */
+.palette-section { padding: 48px; border-bottom: 3px solid #000; }
+.palette-row { display: flex; }
+.swatch {
+  flex: 1; height: 130px;
+  display: flex; align-items: flex-end; padding: 10px;
+  border: 1.5px solid #000; margin-right: -1px;
+}
+.swatch:last-child { margin-right: 0; }
+.swatch span {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  padding: 2px 6px;
+  background: rgba(0,0,0,0.55); color: #fff;
+}
+.swatch--light span { background: rgba(255,255,255,0.75); color: #000; }
+
+/* ── Typography ── */
+.type-section { padding: 48px; border-bottom: 3px solid #000; }
+.type-specimens { display: flex; flex-direction: column; gap: 0; }
+.type-specimen { border: 1.5px solid #000; padding: 32px; margin-bottom: -1px; }
+.font-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #999; margin-bottom: 16px; }
+.font-display-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 8vw, 120px); line-height: 0.9; color: #000;
+}
+.font-display-mono { font-family: 'Space Mono', monospace; font-size: 30px; }
+.font-alphabet { font-size: 13px; color: #888; margin-top: 14px; letter-spacing: 0.08em; word-break: break-all; }
+.font-sizes {
+  display: flex; gap: 24px; align-items: baseline; margin-top: 16px;
+  font-family: 'Space Mono', monospace; color: #000;
+}
+
+/* ── Components ── */
+.components-section { border-bottom: 3px solid #000; }
+
+.comp-block {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-bottom: 3px solid #000;
+}
+.comp-block:last-child { border-bottom: none; }
+
+.comp-label {
+  padding: 32px 24px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  border-right: 3px solid #000;
+  display: flex; align-items: center;
+  background: #000; color: #fff;
+}
+
+.comp-demo {
+  padding: 40px 48px;
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+}
+
+/* Buttons */
+.b-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px; font-weight: 700;
+  padding: 14px 28px;
+  cursor: pointer; letter-spacing: 0.05em;
+  text-transform: uppercase; border: 3px solid #000;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.b-btn--primary {
+  background: #FF0000; color: #fff;
+  box-shadow: 4px 4px 0 #000;
+}
+.b-btn--primary:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+.b-btn--secondary {
+  background: #FFFF00; color: #000;
+  box-shadow: 4px 4px 0 #000;
+}
+.b-btn--secondary:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+.b-btn--ghost { background: transparent; color: #000; }
+
+/* Card */
+.b-card {
+  border: 3px solid #000;
+  max-width: 260px; background: #fff;
+}
+.b-card-num {
+  padding: 10px 16px;
+  font-size: 10px; letter-spacing: 0.2em;
+  border-bottom: 2px solid #000;
+  background: #000; color: #fff;
+}
+.b-card-body { padding: 18px; }
+.b-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; margin-bottom: 10px; }
+.b-card-text { font-size: 12px; line-height: 1.65; color: #555; margin-bottom: 14px; }
+.b-card-link {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none; color: #000;
+  border-bottom: 2px solid #FF0000; padding-bottom: 2px;
+}
+
+/* Input */
+.b-field { display: flex; flex-direction: column; gap: 8px; width: 280px; }
+.b-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+.b-input {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px; padding: 12px 14px;
+  border: 3px solid #000;
+  background: #fff; outline: none; width: 100%;
+  transition: box-shadow 0.1s;
+}
+.b-input:focus { box-shadow: 4px 4px 0 #FF0000; }
+
+/* Badges */
+.b-badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 5px 10px; border: 2px solid #000;
+}
+.b-badge--primary { background: #000; color: #fff; }
+.b-badge--danger { background: #FF0000; color: #fff; border-color: #FF0000; }
+.b-badge--warning { background: #FFFF00; color: #000; }
+.b-badge--outline { background: transparent; color: #000; }
+
+/* ── Footer ── */
+.detail-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 28px 48px;
+  background: #FFFF00; border-top: 3px solid #000;
+}
+.detail-footer a {
+  font-size: 13px; font-weight: 700; color: #000;
+  text-decoration: none; letter-spacing: 0.05em;
+}
+.detail-footer a:hover { text-decoration: underline; }

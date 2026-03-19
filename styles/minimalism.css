@@ -1,0 +1,165 @@
+/* ============================================================
+   MINIMALISM — Detail Page Stylesheet
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #FAFAFA;
+  --bg-alt: #F4F4F2;
+  --text: #1a1a1a;
+  --muted: #888;
+  --border: #e8e8e8;
+  --rule: 1px solid var(--border);
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-top: 52px;
+}
+
+/* ── Back Nav ── */
+.back-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 52px; z-index: 1000;
+  background: var(--bg);
+  border-bottom: var(--rule);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 64px;
+}
+.back-nav a {
+  font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 300;
+  letter-spacing: 0.1em; color: var(--muted); text-decoration: none;
+  transition: color 0.2s;
+}
+.back-nav a:hover { color: var(--text); }
+.back-nav-count { font-family: 'DM Mono', monospace; font-size: 10px; color: #ccc; letter-spacing: 0.1em; }
+
+/* ── Hero ── */
+.hero {
+  padding: 100px 120px 80px;
+  min-height: 60vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  border-bottom: var(--rule);
+}
+.hero-tag {
+  font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 300;
+  letter-spacing: 0.22em; text-transform: uppercase; color: #ccc; margin-bottom: 48px;
+}
+.hero-title {
+  font-size: clamp(64px, 9vw, 140px); font-weight: 300;
+  line-height: 1.0; letter-spacing: -0.03em;
+  color: var(--text); margin-bottom: 40px;
+  font-style: italic;
+}
+.hero-subtitle {
+  font-size: 17px; font-weight: 300;
+  color: var(--muted); max-width: 480px; line-height: 1.8;
+}
+
+/* ── Section ── */
+.section { padding: 80px 120px; border-bottom: var(--rule); }
+.section-label {
+  font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 300;
+  letter-spacing: 0.22em; text-transform: uppercase; color: #ccc; margin-bottom: 48px;
+}
+
+/* ── About ── */
+.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.about-text { font-size: 16px; font-weight: 300; line-height: 2; color: var(--muted); }
+.about-text p + p { margin-top: 20px; }
+
+/* ── Characteristics ── */
+.chars-list { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+.char-item {
+  padding: 20px 0; border-bottom: var(--rule);
+  font-size: 18px; font-weight: 300;
+  display: flex; align-items: center; justify-content: space-between;
+  color: var(--text);
+}
+.char-item:first-child { border-top: var(--rule); }
+.char-num { font-family: 'DM Mono', monospace; font-size: 10px; color: #ccc; }
+
+/* ── Palette ── */
+.palette-row { display: flex; gap: 24px; }
+.swatch {
+  flex: 1; height: 100px;
+  border: var(--rule);
+  display: flex; align-items: flex-end; padding: 12px;
+}
+.swatch span { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
+.swatch--dark span { color: rgba(255,255,255,0.5); }
+
+/* ── Typography ── */
+.type-specimens { display: flex; flex-direction: column; gap: 48px; }
+.type-specimen { padding-bottom: 48px; border-bottom: var(--rule); }
+.type-specimen:last-child { border-bottom: none; padding-bottom: 0; }
+.font-label { font-family: 'DM Mono', monospace; font-size: 10px; color: #ccc; letter-spacing: 0.2em; margin-bottom: 24px; }
+.font-display { font-size: clamp(48px, 7vw, 100px); font-weight: 300; line-height: 1; font-style: italic; margin-bottom: 16px; }
+.font-display-upright { font-size: 36px; font-weight: 300; line-height: 1.4; margin-bottom: 14px; color: var(--muted); }
+.font-alphabet { font-size: 14px; font-weight: 300; color: var(--muted); letter-spacing: 0.06em; }
+.font-scale { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+
+/* ── Components ── */
+.comp-grid { display: flex; flex-direction: column; gap: 64px; }
+.comp-block { display: flex; flex-direction: column; gap: 20px; }
+.comp-label-text { font-family: 'DM Mono', monospace; font-size: 10px; color: #ccc; letter-spacing: 0.2em; text-transform: uppercase; }
+.comp-demo { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+
+/* Buttons */
+.m-btn {
+  font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 400;
+  padding: 12px 28px; cursor: pointer; letter-spacing: 0.06em;
+  transition: all 0.2s;
+}
+.m-btn--primary { background: var(--text); color: var(--bg); border: 1px solid var(--text); }
+.m-btn--primary:hover { background: #333; border-color: #333; }
+.m-btn--secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.m-btn--secondary:hover { border-color: var(--text); }
+.m-btn--ghost { background: transparent; border: none; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--border); border-radius: 0; }
+.m-btn--ghost:hover { color: var(--text); border-color: var(--text); }
+
+/* Card */
+.m-card { padding: 36px; border: var(--rule); max-width: 280px; }
+.m-card-label { font-family: 'DM Mono', monospace; font-size: 9px; color: #ccc; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+.m-card-title { font-size: 24px; font-weight: 300; font-style: italic; margin-bottom: 12px; }
+.m-card-text { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+.m-card-link { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-decoration: none; letter-spacing: 0.1em; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+.m-card-rule { height: 1px; background: var(--border); margin-bottom: 20px; }
+
+/* Input */
+.m-field { display: flex; flex-direction: column; gap: 10px; width: 280px; }
+.m-label { font-family: 'DM Mono', monospace; font-size: 10px; color: #ccc; letter-spacing: 0.18em; text-transform: uppercase; }
+.m-input {
+  font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300;
+  padding: 12px 0; border: none; border-bottom: 1px solid var(--border);
+  background: transparent; color: var(--text); outline: none; width: 100%;
+  transition: border-color 0.2s;
+}
+.m-input::placeholder { color: #ccc; }
+.m-input:focus { border-color: var(--text); }
+
+/* Badge */
+.m-badge {
+  display: inline-block; font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 5px 10px; color: var(--muted);
+}
+.m-badge--bordered { border: 1px solid var(--border); }
+.m-badge--filled { background: var(--text); color: var(--bg); }
+.m-badge--muted { color: #ccc; }
+
+/* ── Footer ── */
+.detail-footer {
+  padding: 48px 120px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.detail-footer a {
+  font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 300;
+  letter-spacing: 0.1em; color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.detail-footer a:hover { color: var(--text); }

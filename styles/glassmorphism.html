@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism — Web Design Catalogue</title>
+  <link rel="stylesheet" href="glassmorphism.css">
+</head>
+<body>
+
+  <div class="back-nav">
+    <a href="../index.html">← Catalogue</a>
+    <span class="back-nav-count">02 / 08</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-tag">Web Design Style · 02 of 08</div>
+    <h1 class="hero-title">Glassmorphism</h1>
+    <p class="hero-subtitle">Translucent surfaces, frosted depth, and coloured light bleeding through. Design that exists between the physical and the ethereal.</p>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="section-title">About This Style</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Glassmorphism emerged prominently around 2020–2021, popularized by Apple's macOS Big Sur and Microsoft's Fluent Design. The aesthetic uses backdrop-filter blur to simulate frosted glass — surfaces that are present but see-through, layered over rich, colorful backgrounds.</p>
+        <p>The technique is technically enabled by CSS backdrop-filter, which applies filters to whatever is behind an element. Combined with semi-transparent backgrounds and refined borders, it creates the illusion of physical depth without heavy drop shadows.</p>
+      </div>
+      <div class="about-text">
+        <p>Backgrounds are typically rich, dark gradients punctuated by luminous blobs of color — these "orbs" give glassmorphic surfaces something beautiful to be transparent against. Without a compelling backdrop, the effect falls flat.</p>
+        <p>The style excels in dashboard UIs, music apps, and any interface where layered depth helps organize information hierarchy. It pairs naturally with soft, rounded components and light, airy typography.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characteristics -->
+  <section class="section">
+    <div class="section-title">Characteristics</div>
+    <div class="chars-grid">
+      <div class="char-item">backdrop-filter: blur()</div>
+      <div class="char-item">rgba semi-transparent bg</div>
+      <div class="char-item">Subtle white/light borders</div>
+      <div class="char-item">Dark, rich gradient backdrop</div>
+      <div class="char-item">Luminous orb shapes behind</div>
+      <div class="char-item">Rounded corners (16–24px)</div>
+      <div class="char-item">Light, airy typography</div>
+      <div class="char-item">Minimal, layered depth</div>
+      <div class="char-item">Pastel / jewel tone accents</div>
+      <div class="char-item">Soft hover transitions</div>
+      <div class="char-item">Gradient text highlights</div>
+      <div class="char-item">No harsh shadows</div>
+    </div>
+  </section>
+
+  <!-- Palette -->
+  <section class="section">
+    <div class="section-title">Color Palette</div>
+    <div class="palette-row">
+      <div class="swatch" style="background:rgba(120,40,255,0.35)"><span>#7828FF</span></div>
+      <div class="swatch" style="background:rgba(0,130,255,0.35)"><span>#0082FF</span></div>
+      <div class="swatch" style="background:rgba(52,211,153,0.35)"><span>#34D399</span></div>
+      <div class="swatch" style="background:rgba(255,255,255,0.08)"><span>rgba white</span></div>
+      <div class="swatch" style="background:#06001a"><span>#06001A</span></div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="section">
+    <div class="section-title">Typography</div>
+    <div class="type-specimens">
+      <div class="type-specimen">
+        <div class="font-label">Display — Outfit 800</div>
+        <div class="font-display">Design Beyond</div>
+        <div class="font-alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+      <div class="type-specimen">
+        <div class="font-label">Body — Outfit 200–300</div>
+        <div class="font-display-light">Translucency invites you deeper into the interface. Light passes through everything.</div>
+        <div class="font-alphabet" style="margin-top:0;">14px / line-height 1.8 / weight 300</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="section">
+    <div class="section-title">Components</div>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <div class="comp-label-text">Button</div>
+        <div class="comp-demo">
+          <button class="g-btn g-btn--primary">Explore Now</button>
+          <button class="g-btn g-btn--secondary">Learn More</button>
+          <button class="g-btn g-btn--ghost">Dismiss</button>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Card</div>
+        <div class="comp-demo">
+          <div class="g-card">
+            <div class="g-card-tag">Featured</div>
+            <div class="g-card-title">Aurora Collection</div>
+            <p class="g-card-text">A curated set of translucent interface components for modern dashboards.</p>
+            <a class="g-card-cta">View collection →</a>
+          </div>
+          <div class="g-card" style="background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.25)">
+            <div class="g-card-tag" style="color:#34d399">New</div>
+            <div class="g-card-title">2,847 designs</div>
+            <p class="g-card-text">Active community contributions over the last 30 days.</p>
+            <a class="g-card-cta" style="color:#34d399">Browse all →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Input</div>
+        <div class="comp-demo">
+          <div class="g-field">
+            <label class="g-label">Email Address</label>
+            <input class="g-input" type="email" placeholder="you@example.com">
+          </div>
+          <div class="g-field">
+            <label class="g-label">Search</label>
+            <input class="g-input" type="text" placeholder="Search designs…">
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Badge</div>
+        <div class="comp-demo">
+          <span class="g-badge g-badge--purple">Featured</span>
+          <span class="g-badge g-badge--blue">New</span>
+          <span class="g-badge g-badge--green">Live</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="detail-footer">
+    <a href="../index.html">← Back to Catalogue</a>
+    <a href="neomorphism.html">Next: Neomorphism →</a>
+  </footer>
+
+</body>
+</html>

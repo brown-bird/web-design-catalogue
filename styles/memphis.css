@@ -1,0 +1,238 @@
+/* ============================================================
+   MEMPHIS / 80s — Detail Page Stylesheet
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Space+Mono:wght@400;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #FFFBF0;
+  --pink: #FF2D78;
+  --yellow: #FFE600;
+  --cyan: #00D4FF;
+  --purple: #7B2FBE;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: var(--bg);
+  color: var(--black);
+  padding-top: 52px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Dot pattern background */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: radial-gradient(circle, var(--pink) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  opacity: 0.08;
+  pointer-events: none; z-index: 0;
+}
+
+/* ── Back Nav ── */
+.back-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 52px; z-index: 1000;
+  background: var(--yellow);
+  border-bottom: 4px solid var(--black);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+}
+.back-nav a {
+  font-size: 18px; color: var(--black); text-decoration: none;
+  transition: color 0.1s;
+}
+.back-nav a:hover { color: var(--pink); }
+.back-nav-count { font-size: 16px; color: rgba(0,0,0,0.4); }
+
+/* ── Decorative shapes ── */
+.deco { position: absolute; pointer-events: none; }
+.deco--circle { border-radius: 50%; }
+
+/* ── Hero ── */
+.hero {
+  padding: 60px 80px 56px;
+  position: relative; z-index: 1;
+  border-bottom: 4px solid var(--black);
+  overflow: hidden;
+  background: var(--bg);
+}
+.hero::before { /* circle decoration */
+  content: '';
+  position: absolute; width: 200px; height: 200px; border-radius: 50%;
+  border: 10px solid var(--pink); top: 20%; right: 6%; opacity: 0.5;
+}
+.hero::after { /* triangle */
+  content: '';
+  position: absolute; top: 10%; right: 18%;
+  width: 0; height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86px solid var(--yellow);
+  opacity: 0.6;
+}
+.hero-tag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  background: var(--black); color: var(--yellow);
+  padding: 6px 14px; margin-bottom: 28px;
+}
+.hero-title {
+  font-size: clamp(64px, 11vw, 160px);
+  line-height: 0.9; letter-spacing: -0.02em;
+  color: var(--black);
+  text-shadow: 5px 5px 0 var(--pink), 10px 10px 0 var(--yellow);
+  margin-bottom: 24px; position: relative; z-index: 1;
+}
+.hero-zigzag {
+  width: 280px; height: 20px;
+  background:
+    linear-gradient(135deg, var(--purple) 25%, transparent 25%) -8px 0,
+    linear-gradient(225deg, var(--purple) 25%, transparent 25%) -8px 0,
+    linear-gradient(315deg, var(--purple) 25%, transparent 25%),
+    linear-gradient(45deg, var(--purple) 25%, transparent 25%);
+  background-size: 16px 20px;
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700;
+  color: var(--purple); max-width: 420px; line-height: 1.5; letter-spacing: 0.02em;
+}
+
+/* ── Section ── */
+.section { padding: 56px 80px; border-bottom: 4px solid var(--black); position: relative; z-index: 1; }
+.section-tag {
+  display: inline-block; font-family: 'Space Mono', monospace;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  background: var(--pink); color: var(--white); padding: 5px 12px; margin-bottom: 28px;
+}
+
+/* ── About ── */
+.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.about-block {
+  padding: 28px; border: 3px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black); background: var(--white);
+}
+.about-block p { font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.7; color: #333; }
+.about-block p + p { margin-top: 12px; }
+
+/* ── Characteristics ── */
+.chars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.char-item {
+  padding: 14px 18px;
+  border: 3px solid var(--black);
+  font-size: 16px; background: var(--white);
+  box-shadow: 3px 3px 0 var(--black);
+}
+.char-item:nth-child(1) { background: var(--pink); color: var(--white); }
+.char-item:nth-child(2) { background: var(--yellow); }
+.char-item:nth-child(4) { background: var(--cyan); }
+.char-item:nth-child(7) { background: var(--purple); color: var(--white); }
+.char-item:nth-child(10) { background: var(--pink); color: var(--white); }
+
+/* ── Palette ── */
+.palette-row { display: flex; }
+.swatch {
+  flex: 1; height: 130px;
+  border: 3px solid var(--black); margin-right: -3px;
+  display: flex; align-items: flex-end; padding: 10px;
+}
+.swatch:last-child { margin-right: 0; }
+.swatch span { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 6px; }
+.swatch--light span { background: rgba(255,255,255,0.7); color: #000; }
+
+/* ── Typography ── */
+.type-specimens { display: flex; flex-direction: column; gap: 16px; }
+.type-specimen {
+  padding: 32px; border: 3px solid var(--black); background: var(--white);
+  box-shadow: 5px 5px 0 var(--black);
+}
+.font-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); margin-bottom: 14px; }
+.font-display { font-size: clamp(48px, 7vw, 100px); line-height: 0.95; text-shadow: 3px 3px 0 var(--pink), 6px 6px 0 var(--yellow); margin-bottom: 12px; }
+.font-display-mono { font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; color: var(--purple); line-height: 1.4; margin-bottom: 10px; }
+.font-alphabet { font-family: 'Space Mono', monospace; font-size: 13px; color: #999; }
+
+/* ── Components ── */
+.comp-grid { display: flex; flex-direction: column; gap: 40px; }
+.comp-block { display: flex; flex-direction: column; gap: 14px; }
+.comp-label-text { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #999; }
+.comp-demo { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+
+/* Buttons */
+.mem-btn {
+  font-family: 'Fredoka One', cursive; font-size: 20px;
+  padding: 12px 28px; cursor: pointer;
+  border: 3px solid var(--black); text-transform: uppercase;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.mem-btn--primary { background: var(--pink); color: var(--white); box-shadow: 5px 5px 0 var(--black); }
+.mem-btn--primary:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--black); }
+.mem-btn--yellow { background: var(--yellow); color: var(--black); box-shadow: 5px 5px 0 var(--black); }
+.mem-btn--yellow:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--black); }
+.mem-btn--purple { background: var(--purple); color: var(--white); box-shadow: 5px 5px 0 var(--black); }
+.mem-btn--purple:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--black); }
+.mem-btn--outline { background: var(--white); color: var(--black); box-shadow: 5px 5px 0 var(--black); }
+.mem-btn--outline:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--black); }
+
+/* Card */
+.mem-card { border: 3px solid var(--black); max-width: 240px; box-shadow: 6px 6px 0 var(--black); background: var(--white); }
+.mem-card-header { height: 10px; }
+.mem-card-body { padding: 20px; }
+.mem-card-title { font-size: 24px; margin-bottom: 8px; }
+.mem-card-text { font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.6; color: #555; margin-bottom: 14px; }
+.mem-card-link { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-decoration: none; color: var(--pink); border-bottom: 2px solid var(--pink); }
+
+/* Input */
+.mem-field { display: flex; flex-direction: column; gap: 8px; width: 260px; }
+.mem-label { font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple); }
+.mem-input {
+  font-family: 'Fredoka One', cursive; font-size: 18px;
+  padding: 12px 16px; border: 3px solid var(--black);
+  background: var(--white); outline: none; color: var(--black); width: 100%;
+  transition: box-shadow 0.1s;
+}
+.mem-input::placeholder { color: #ccc; }
+.mem-input:focus { box-shadow: 4px 4px 0 var(--pink); }
+
+/* Badge */
+.mem-badge {
+  display: inline-block; font-size: 16px;
+  padding: 5px 14px; border: 3px solid var(--black); text-transform: uppercase;
+  box-shadow: 3px 3px 0 var(--black);
+}
+.mem-badge--pink { background: var(--pink); color: var(--white); }
+.mem-badge--yellow { background: var(--yellow); color: var(--black); }
+.mem-badge--cyan { background: var(--cyan); color: var(--black); }
+.mem-badge--purple { background: var(--purple); color: var(--white); }
+
+/* Bottom tile grid */
+.tile-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 4px solid var(--black);
+  position: relative; z-index: 1;
+}
+.tile {
+  padding: 24px; text-align: center; font-size: 40px;
+  border-right: 4px solid var(--black);
+}
+.tile:last-child { border-right: none; }
+
+/* ── Footer ── */
+.detail-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 28px 80px;
+  background: var(--purple); border-top: 4px solid var(--black);
+  position: relative; z-index: 1;
+}
+.detail-footer a {
+  font-size: 20px; color: var(--yellow); text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3); transition: color 0.1s;
+}
+.detail-footer a:hover { color: var(--white); }
