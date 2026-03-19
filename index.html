@@ -6,7 +6,7 @@
   <title>Web Design Catalogue</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700&family=Outfit:wght@200;300;400;600;800&family=Nunito:wght@300;400;600;800&family=Barlow:ital,wght@0,100;0,400;0,700;0,900&family=VT323&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Fredoka+One&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700&family=Outfit:wght@200;300;400;600;800&family=Nunito:wght@300;400;600;800&family=Barlow:ital,wght@0,100;0,400;0,700;0,900&family=VT323&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Fredoka+One&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400;500&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   <nav class="catalogue-nav">
     <span class="catalogue-title">DESIGN CATALOGUE</span>
     <span class="current-style" id="currentStyle">—</span>
-    <span class="style-counter" id="styleCounter">— / 08</span>
+    <span class="style-counter" id="styleCounter">— / 11</span>
   </nav>
 
   <!-- 01 BRUTALISM -->
@@ -325,6 +325,90 @@
     </a>
   </section>
 
+  <!-- 09 CLAYMORPHISM -->
+  <section class="style-section" data-style="Claymorphism" data-index="9">
+    <a href="styles/claymorphism.html" class="section-link" aria-label="Explore Claymorphism">
+      <div class="clay-preview">
+        <div class="clay-spacer"></div>
+        <div class="clay-scene">
+          <div class="clay-blob clay-blob--1"></div>
+          <div class="clay-blob clay-blob--2"></div>
+          <div class="clay-blob clay-blob--3"></div>
+          <div class="clay-card">
+            <div class="clay-badge">✦ Trending</div>
+            <h2 class="clay-headline">Soft<br>&amp; Puffy</h2>
+            <p class="clay-sub">Inflated 3D with pastel warmth.</p>
+            <button class="clay-btn">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="style-label">
+        <span class="style-num">09</span>
+        <span class="style-name">Claymorphism</span>
+        <span class="style-explore">Explore →</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- 10 ART DECO -->
+  <section class="style-section" data-style="Art Deco" data-index="10">
+    <a href="styles/artdeco.html" class="section-link" aria-label="Explore Art Deco">
+      <div class="deco-preview">
+        <div class="deco-spacer"></div>
+        <div class="deco-scene">
+          <div class="deco-panel">
+            <div class="deco-corner deco-corner--tl"></div>
+            <div class="deco-corner deco-corner--tr"></div>
+            <div class="deco-corner deco-corner--bl"></div>
+            <div class="deco-corner deco-corner--br"></div>
+            <div class="deco-eyebrow">Maison d'Art</div>
+            <div class="deco-divider"></div>
+            <h2 class="deco-headline">ART<br>DECO</h2>
+            <div class="deco-divider"></div>
+            <div class="deco-chevrons">◆ ◆ ◆</div>
+            <div class="deco-sub">EST. MCMXXV</div>
+          </div>
+        </div>
+      </div>
+      <div class="style-label">
+        <span class="style-num">10</span>
+        <span class="style-name">Art Deco</span>
+        <span class="style-explore">Explore →</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- 11 BENTO BOX -->
+  <section class="style-section" data-style="Bento Box" data-index="11">
+    <a href="styles/bento.html" class="section-link" aria-label="Explore Bento Box">
+      <div class="bento-preview">
+        <div class="bento-spacer"></div>
+        <div class="bento-grid-wrap">
+          <div class="bento-cell bento-cell--hero">
+            <div class="bento-hero-eyebrow">Layout as Design</div>
+            <div class="bento-hero-title">Bento<br>Box</div>
+          </div>
+          <div class="bento-cell bento-cell--blue">
+            <div class="bento-stat-num">11</div>
+            <div class="bento-stat-label">Styles</div>
+          </div>
+          <div class="bento-cell bento-cell--green">
+            <div class="bento-stat-num">↗</div>
+            <div class="bento-stat-label">Grid</div>
+          </div>
+          <div class="bento-cell bento-cell--wide">
+            <div class="bento-tag">Modular · Scalable · Clean</div>
+          </div>
+        </div>
+      </div>
+      <div class="style-label style-label--dark">
+        <span class="style-num">11</span>
+        <span class="style-name">Bento Box</span>
+        <span class="style-explore">Explore →</span>
+      </div>
+    </a>
+  </section>
+
   <script>
     const sections = document.querySelectorAll('.style-section');
     const currentStyleEl = document.getElementById('currentStyle');
@@ -336,7 +420,8 @@
           const style = entry.target.dataset.style;
           const index = entry.target.dataset.index;
           currentStyleEl.textContent = style;
-          styleCounterEl.textContent = `0${index} / 08`;
+          const padded = String(index).padStart(2, '0');
+          styleCounterEl.textContent = `${padded} / 11`;
         }
       });
     }, { threshold: 0.5 });

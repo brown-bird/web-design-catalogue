@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claymorphism — Web Design Catalogue</title>
+  <link rel="stylesheet" href="claymorphism.css">
+</head>
+<body>
+
+  <div class="back-nav">
+    <a href="../index.html">← Catalogue</a>
+    <span class="back-nav-count">09 / 11</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-tag">Web Design Style · 09 of 11</div>
+    <h1 class="hero-title"><span>Clay</span><br>morphism</h1>
+    <p class="hero-sub">Inflated, puffy 3D elements with layered shadows and pastel warmth. The interface equivalent of soft modelling clay.</p>
+    <div class="hero-pills">
+      <span class="hero-pill hero-pill--pink">✦ Puffy</span>
+      <span class="hero-pill hero-pill--purple">◎ 3D Depth</span>
+      <span class="hero-pill hero-pill--mint">✿ Pastel</span>
+      <span class="hero-pill hero-pill--yellow">★ Friendly</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="section-tag">About This Style</div>
+    <div class="about-cols">
+      <div class="about-block">
+        <p>Claymorphism emerged in the early 2020s as a playful reaction to the cold minimalism of flat design. Where flat design stripped interfaces down to their barest geometry, claymorphism exaggerates — inflating surfaces, softening every edge, and stacking multiple shadows to create objects that appear to have physical mass.</p>
+        <p>The technique is distinct from Glassmorphism (which is transparent and frosted) and Neomorphism (which is recessed into the surface). Clay elements sit proud, like lumps of coloured dough pressed onto a background. Each object has a clearly defined front face, depth layers on the sides, and an inset highlight on the top edge that catches imaginary light.</p>
+      </div>
+      <div class="about-block">
+        <p>The CSS technique centres on layered box-shadows: a soft outer shadow for ambient light, a harder offset shadow at 4–6px for the "clay depth" layer, and an inset rgba(255,255,255,0.6–0.9) glow at the top to simulate a rounded, light-catching surface. Combined with border-radius values of 24–32px on everything, even rectangular shapes feel organic.</p>
+        <p>Colour-wise, claymorphism skews pastel: pinks, lavenders, mints, and yellows against off-white or very pale gradients. The result is high-energy without aggression — cheerful, tactile, and immediately approachable. It became widespread in mobile UI design, 3D illustration, and onboarding flows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characteristics -->
+  <section class="section">
+    <div class="section-tag">Characteristics</div>
+    <div class="chars-grid">
+      <div class="char-item">Layered box-shadows for 3D depth</div>
+      <div class="char-item">Inset white highlight (top edge)</div>
+      <div class="char-item">Heavy border-radius (24–32px)</div>
+      <div class="char-item">Pastel colour palette</div>
+      <div class="char-item">Elements sit proud of surface</div>
+      <div class="char-item">Offset "clay layer" shadow</div>
+      <div class="char-item">Rounded, friendly typefaces</div>
+      <div class="char-item">Soft gradient backgrounds</div>
+      <div class="char-item">Pill-shaped buttons</div>
+      <div class="char-item">Floating badge elements</div>
+      <div class="char-item">High saturation accents</div>
+      <div class="char-item">Tactile, playful feel</div>
+    </div>
+  </section>
+
+  <!-- Palette -->
+  <section class="section">
+    <div class="section-tag">Color Palette</div>
+    <div class="palette-row">
+      <div class="swatch" style="background:#FF6B9D"><span>#FF6B9D</span></div>
+      <div class="swatch" style="background:#C44DFF"><span>#C44DFF</span></div>
+      <div class="swatch" style="background:#4DFFB8"><span style="color:rgba(0,0,0,0.5)">#4DFFB8</span></div>
+      <div class="swatch" style="background:#FFD166"><span style="color:rgba(0,0,0,0.5)">#FFD166</span></div>
+      <div class="swatch swatch--light" style="background:#F8F4FF;border:1px solid rgba(196,77,255,0.15)"><span>#F8F4FF</span></div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="section">
+    <div class="section-tag">Typography</div>
+    <div class="type-specimens">
+      <div class="type-specimen">
+        <div class="font-label">Display — Nunito 900</div>
+        <div class="font-display">Soft &amp; Puffy!</div>
+        <div class="font-body">Bold, rounded, and friendly. Nunito's geometry matches the inflated softness of clay elements perfectly.</div>
+        <div class="font-alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+      <div class="type-specimen">
+        <div class="font-label">Body — Nunito 400</div>
+        <div class="font-body" style="font-size:17px;line-height:1.7;margin-bottom:12px;">Claymorphism is about physicality — every element should feel like it could be picked up and squeezed.</div>
+        <div class="font-body">14px / line-height 1.7 / Weight 400 for body, 700 for labels, 900 for display</div>
+        <div class="font-alphabet">Regular · SemiBold · Bold · ExtraBold · Black</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="section">
+    <div class="section-tag">Components</div>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <div class="comp-label-text">Button</div>
+        <div class="comp-demo">
+          <button class="clay-btn-demo clay-btn-demo--pink">Get Started</button>
+          <button class="clay-btn-demo clay-btn-demo--purple">Explore</button>
+          <button class="clay-btn-demo clay-btn-demo--mint">Connect</button>
+          <button class="clay-btn-demo clay-btn-demo--yellow">Learn More</button>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Card</div>
+        <div class="comp-demo">
+          <div class="clay-card-demo">
+            <div class="clay-card-demo-header" style="background:linear-gradient(135deg,#FF6B9D,#C44DFF)"></div>
+            <div class="clay-card-demo-title">Studio Launch</div>
+            <p class="clay-card-demo-text">Soft interfaces that feel tangible, alive, and just a little bit squishy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Input</div>
+        <div class="comp-demo" style="flex-direction:column;width:100%">
+          <div class="clay-field">
+            <label class="clay-label">Your Name</label>
+            <input class="clay-input" type="text" placeholder="e.g. Alex Chen">
+          </div>
+          <div class="clay-field">
+            <label class="clay-label" style="color:#C44DFF">Email Address</label>
+            <input class="clay-input" type="email" placeholder="you@example.com" style="border-color:rgba(196,77,255,0.25)">
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Badge</div>
+        <div class="comp-demo">
+          <span class="clay-badge-demo clay-badge-demo--pink">✦ Trending</span>
+          <span class="clay-badge-demo clay-badge-demo--purple">◎ New</span>
+          <span class="clay-badge-demo clay-badge-demo--mint">✿ Fresh</span>
+          <span class="clay-badge-demo clay-badge-demo--yellow">★ Featured</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="detail-footer">
+    <a href="../index.html">← Back to Catalogue</a>
+    <a href="artdeco.html">Next: Art Deco →</a>
+  </footer>
+
+</body>
+</html>
