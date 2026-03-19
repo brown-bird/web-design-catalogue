@@ -131,7 +131,8 @@ body {
 .brutalism-preview, .glass-preview, .neo-preview,
 .swiss-preview, .cyber-preview, .min-preview,
 .skeu-preview, .memphis-preview,
-.clay-preview, .deco-preview, .bento-preview {
+.clay-preview, .deco-preview, .bento-preview,
+.mat-preview, .vapor-preview, .haus-preview {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1391,3 +1392,397 @@ body {
   color: #6e6e73;
   letter-spacing: 0.02em;
 }
+
+
+/* ============================================================
+   12 — MATERIAL DESIGN
+   ============================================================ */
+.mat-preview {
+  background: #FAFAFA;
+  display: grid;
+  grid-template-rows: 44px 56px 1fr;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.mat-spacer { height: 44px; flex-shrink: 0; width: 100%; }
+
+.mat-app-bar {
+  background: #1565C0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.15);
+  color: #fff;
+  z-index: 1;
+}
+
+.mat-app-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mat-app-icon {
+  font-size: 20px;
+  color: rgba(255,255,255,0.8);
+}
+
+.mat-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mat-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 16px 8px;
+}
+
+.mat-card--dp4 {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.14), 0 3px 8px rgba(0,0,0,0.1), 0 1px 12px rgba(0,0,0,0.08);
+}
+
+.mat-card-overline {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #E91E63;
+  margin-bottom: 4px;
+}
+
+.mat-card-headline {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 400;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.mat-card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.mat-card-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  margin-top: 4px;
+}
+
+.mat-btn-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1565C0;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.mat-elev-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.mat-elev-item {
+  background: #fff;
+  border-radius: 4px;
+  height: 56px;
+  display: flex;
+  align-items: flex-end;
+  padding: 6px 8px;
+}
+
+.mat-elev-item span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #9E9E9E;
+}
+
+.mat-elev-0 { border: 1px solid #E0E0E0; }
+.mat-elev-2 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08); }
+.mat-elev-4 { box-shadow: 0 2px 4px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,0.1); }
+.mat-elev-8 { box-shadow: 0 4px 8px rgba(0,0,0,0.16), 0 8px 16px rgba(0,0,0,0.1); }
+
+.mat-fab {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #E91E63;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(233,30,99,0.35), 0 6px 16px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+
+/* ============================================================
+   13 — VAPORWAVE
+   ============================================================ */
+.vapor-preview {
+  background: #1A0035;
+  display: grid;
+  grid-template-rows: 44px 1fr 120px 72px;
+  font-family: 'VT323', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.vapor-spacer { height: 44px; flex-shrink: 0; width: 100%; }
+
+.vapor-scanlines {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.1) 2px,
+    rgba(0,0,0,0.1) 4px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+.vapor-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.vapor-sun {
+  width: 120px; height: 60px;
+  border-radius: 60px 60px 0 0;
+  background: linear-gradient(to bottom, #FF8C00 0%, #FF2D7C 100%);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.vapor-sun::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 7px,
+    #1A0035 7px,
+    #1A0035 9px
+  );
+}
+
+.vapor-headline {
+  font-size: clamp(54px, 8.5vw, 110px);
+  line-height: 0.88;
+  color: #00F5FF;
+  text-shadow: 0 0 12px #00F5FF, 0 0 40px rgba(0,245,255,0.4), 0 0 80px rgba(0,245,255,0.15);
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.vapor-sub {
+  font-size: 20px;
+  color: #FF2D7C;
+  text-shadow: 0 0 8px #FF2D7C, 0 0 20px rgba(255,45,124,0.4);
+  letter-spacing: 0.3em;
+  margin-top: 10px;
+}
+
+.vapor-grid-floor {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.vapor-grid-floor::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,45,124,0.45) 0,
+      rgba(255,45,124,0.45) 1px,
+      transparent 1px,
+      transparent 36px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,45,124,0.45) 0,
+      rgba(255,45,124,0.45) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  transform: perspective(160px) rotateX(52deg);
+  transform-origin: 50% 0%;
+}
+
+.vapor-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,45,124,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.vapor-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  padding: 12px;
+  border-right: 1px solid rgba(255,45,124,0.2);
+}
+
+.vapor-tile:last-child { border-right: none; }
+.vt-1 { color: #FF2D7C; text-shadow: 0 0 6px #FF2D7C; }
+.vt-2 { color: #FFD700; text-shadow: 0 0 8px #FFD700; }
+.vt-3 { color: #B38DFF; }
+.vt-4 { color: #00F5FF; text-shadow: 0 0 8px #00F5FF; }
+
+
+/* ============================================================
+   14 — BAUHAUS
+   ============================================================ */
+.haus-preview {
+  background: #FFFFFF;
+  display: grid;
+  grid-template-rows: 88px 1fr 60px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.haus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  margin-top: 44px;
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+}
+
+.haus-school {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #000;
+  letter-spacing: 0.15em;
+}
+
+.haus-year {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.2em;
+}
+
+.haus-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.haus-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  gap: 12px;
+}
+
+.haus-col--left { border-right: 3px solid #000; background: #F6C90E; }
+.haus-col--right { border-left: 3px solid #000; }
+
+.haus-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: #E03E2D;
+  border: 3px solid #000;
+}
+
+.haus-shape-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0.2em;
+}
+
+.haus-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.9;
+  color: #000;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.haus-rule {
+  width: 100%;
+  height: 3px;
+  background: #000;
+}
+
+.haus-sub {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.haus-square {
+  width: 64px; height: 64px;
+  background: #1E52A0;
+  border: 3px solid #000;
+}
+
+.haus-triangle {
+  width: 70px; height: 60px;
+  background: #E03E2D;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-top: 8px;
+}
+
+.haus-bar-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 3px solid #000;
+}
+
+.haus-bar {
+  height: 100%;
+  border-right: 3px solid #000;
+}
+
+.haus-bar:last-child { border-right: none; }
+.haus-bar--red { background: #E03E2D; }
+.haus-bar--blue { background: #1E52A0; }
+.haus-bar--yellow { background: #F6C90E; }
+.haus-bar--black { background: #000; }

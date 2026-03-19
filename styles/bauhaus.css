@@ -1,0 +1,558 @@
+/* ============================================================
+   BAUHAUS — Detail Page Stylesheet
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@100;300;400;700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #FFFFFF;
+  --black: #000000;
+  --red: #E03E2D;
+  --blue: #1E52A0;
+  --yellow: #F6C90E;
+  --grey: #F2F2F2;
+  --text: #111111;
+  --mid: #666666;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-top: 44px;
+  overflow-x: hidden;
+}
+
+/* ── Back Nav ── */
+.back-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 44px;
+  background: var(--black);
+  border-bottom: 3px solid var(--black);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+.back-nav a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--yellow);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+.back-nav a:hover { color: #fff; }
+.back-nav-count { font-size: 12px; color: rgba(255,255,255,0.5); font-family: 'Barlow', sans-serif; }
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  border-bottom: 3px solid var(--black);
+}
+
+.hero-accent {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero-accent--red {
+  width: 200px; height: 200px;
+  background: var(--red);
+  top: -60px; right: -60px;
+  border-radius: 50%;
+}
+
+.hero-accent--blue {
+  width: 120px; height: 120px;
+  background: var(--blue);
+  bottom: 40px; left: 40px;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(80px, 14vw, 180px);
+  line-height: 0.88;
+  color: var(--black);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.hero-rule {
+  width: 100%;
+  height: 3px;
+  background: var(--black);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--mid);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.hero-shapes {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-shape {}
+
+.hero-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.hero-square {
+  width: 72px; height: 72px;
+  background: var(--blue);
+}
+
+.hero-triangle {
+  width: 0; height: 0;
+  border-left: 44px solid transparent;
+  border-right: 44px solid transparent;
+  border-bottom: 76px solid var(--yellow);
+}
+
+/* ── Sections ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.section-rule {
+  width: 100%;
+  height: 3px;
+  background: var(--black);
+  margin-bottom: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  margin-bottom: 32px;
+  margin-top: 0;
+  padding-top: 40px;
+}
+
+/* ── About ── */
+.about-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 700px) { .about-cols { grid-template-columns: 1fr; } }
+
+.about-block p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--mid);
+  margin-bottom: 16px;
+}
+
+/* ── Characteristics ── */
+.chars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0;
+  border: 3px solid var(--black);
+}
+
+.char-item {
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  border-right: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.char-item:last-child { border-right: 3px solid var(--black); }
+.char-item--red { background: var(--red); color: #fff; }
+.char-item--blue { background: var(--blue); color: #fff; }
+.char-item--yellow { background: var(--yellow); color: var(--black); }
+.char-item--black { background: var(--black); color: #fff; }
+
+/* ── Palette ── */
+.palette-row {
+  display: flex;
+  gap: 0;
+  border: 3px solid var(--black);
+}
+
+.swatch {
+  flex: 1;
+  min-width: 90px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 14px;
+  border-right: 3px solid var(--black);
+}
+
+.swatch:last-child { border-right: none; }
+
+.swatch span {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.06em;
+}
+
+.swatch-dark { color: rgba(0,0,0,0.6) !important; }
+
+/* ── Typography ── */
+.type-specimens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 3px solid var(--black);
+}
+
+@media (max-width: 700px) { .type-specimens { grid-template-columns: 1fr; } }
+
+.type-specimen {
+  padding: 28px;
+  border-right: 3px solid var(--black);
+}
+
+.type-specimen:last-child { border-right: none; }
+
+.font-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 14px;
+}
+
+.font-display-haus {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5.5vw, 64px);
+  color: var(--black);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.font-body-haus {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--mid);
+  margin-bottom: 10px;
+}
+
+.font-alphabet {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ── Components ── */
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 3px solid var(--black);
+}
+
+@media (max-width: 700px) { .comp-grid { grid-template-columns: 1fr; } }
+
+.comp-block {
+  padding: 24px;
+  border-right: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+}
+
+.comp-block:nth-child(2n) { border-right: none; }
+.comp-block:nth-last-child(-n+2) { border-bottom: none; }
+
+.comp-label-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+
+.comp-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+/* Bauhaus Buttons */
+.haus-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  padding: 10px 20px;
+  border: 3px solid var(--black);
+  cursor: pointer;
+  transition: filter 0.1s;
+}
+
+.haus-btn:hover { filter: brightness(0.88); }
+.haus-btn--red { background: var(--red); color: #fff; }
+.haus-btn--blue { background: var(--blue); color: #fff; }
+.haus-btn--black { background: var(--black); color: #fff; }
+.haus-btn--outline { background: transparent; color: var(--black); }
+
+/* Bauhaus Card */
+.haus-card {
+  background: var(--bg);
+  border: 3px solid var(--black);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.haus-card-bar {
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.haus-card-bar--red { background: var(--red); }
+.haus-card-bar--blue { background: var(--blue); }
+.haus-card-bar--yellow { background: var(--yellow); }
+
+.haus-card-body {
+  padding: 16px;
+}
+
+.haus-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.haus-card-text {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.5;
+}
+
+/* Bauhaus Input */
+.haus-field { width: 100%; }
+
+.haus-label {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.haus-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 3px solid var(--black);
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.1s;
+}
+
+.haus-input:focus { border-color: var(--blue); }
+.haus-input::placeholder { color: #ccc; }
+
+/* Bauhaus Badge */
+.haus-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  padding: 5px 12px;
+  border: 3px solid var(--black);
+}
+
+.haus-badge--red { background: var(--red); color: #fff; }
+.haus-badge--blue { background: var(--blue); color: #fff; }
+.haus-badge--yellow { background: var(--yellow); color: var(--black); }
+.haus-badge--black { background: var(--black); color: #fff; }
+
+/* ── Geometric Composition ── */
+.haus-composition {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border: 3px solid var(--black);
+  min-height: 400px;
+}
+
+.comp-col {
+  border-right: 3px solid var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-col:last-child { border-right: none; }
+
+.comp-col--shapes {
+  align-items: center;
+  justify-content: space-around;
+  padding: 32px 24px;
+  background: var(--grey);
+}
+
+.comp-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.comp-square {
+  width: 70px; height: 70px;
+  background: var(--blue);
+}
+
+.comp-triangle {
+  width: 0; height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid var(--yellow);
+}
+
+.comp-col--text {
+  padding: 32px 28px;
+  justify-content: center;
+  gap: 0;
+}
+
+.comp-big-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--mid);
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.comp-big-num:first-child { margin-top: 0; }
+
+.comp-rule {
+  height: 3px;
+  background: var(--black);
+  margin-bottom: 8px;
+}
+
+.comp-big-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: 0.06em;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.comp-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 16px;
+}
+
+.comp-col--colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-color-block {
+  flex: 1;
+  border-bottom: 3px solid var(--black);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.comp-color-block:last-child { border-bottom: none; }
+
+.comp-color-block span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+}
+
+.ccb-red { background: var(--red); }
+.ccb-red span { color: rgba(255,255,255,0.85); }
+.ccb-blue { background: var(--blue); }
+.ccb-blue span { color: rgba(255,255,255,0.85); }
+.ccb-yellow { background: var(--yellow); }
+.ccb-yellow span { color: rgba(0,0,0,0.7); }
+
+/* ── Footer ── */
+.detail-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  border-top: 3px solid var(--black);
+  background: var(--black);
+}
+
+.detail-footer a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  color: var(--yellow);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.detail-footer a:hover { color: #fff; }

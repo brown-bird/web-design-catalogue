@@ -1,7 +1,7 @@
 # Web Design Catalogue — Feature Roadmap
 
 A living reference of all candidate styles for future additions.
-Currently implemented: 11 styles (01–11).
+Currently implemented: 14 styles (01–14).
 
 ---
 
@@ -20,18 +20,15 @@ Currently implemented: 11 styles (01–11).
 | 09 | Claymorphism | ✅ Done |
 | 10 | Art Deco | ✅ Done |
 | 11 | Bento Box | ✅ Done |
+| 12 | Material Design | ✅ Done |
+| 13 | Vaporwave | ✅ Done |
+| 14 | Bauhaus | ✅ Done |
 
 ---
 
 ## Tier 1 — Planned Next
 
-These styles have a clear, well-defined visual language and strong contrast with existing entries.
-
-| Style | Description |
-|-------|-------------|
-| **Material Design** | Google's depth-and-shadow system: elevation layers, ripple interactions, 8dp grid, Roboto. Strong contrast with Neomorphism/Glassmorphism as it uses real-world depth cues without going skeuomorphic. |
-| **Vaporwave** | Retrofuturist digital dreamscape: hot pink/cyan on deep purple, pixel grids, Roman bust imagery, glitch distortion, Windows 95 UI elements in an aesthetic context. Distinct from Cyberpunk (warmer, nostalgic vs. cold dystopian). |
-| **Bauhaus** | German functionalist school (1919–1933): primary colors only, geometric forms, no ornament whatsoever. Typography IS layout. Sits well next to Swiss/International (its spiritual successor) but more elemental and raw. |
+*(All Tier 1 styles have been implemented.)*
 
 ---
 

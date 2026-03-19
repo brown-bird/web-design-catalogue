@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design — Web Design Catalogue</title>
+  <link rel="stylesheet" href="material.css">
+</head>
+<body>
+
+  <div class="back-nav">
+    <a href="../index.html">← Catalogue</a>
+    <span class="back-nav-count">12 / 14</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-tag">Web Design Style · 12 of 14</div>
+    <h1 class="hero-title">Material<br>Design</h1>
+    <p class="hero-sub">Google's design language built on the metaphor of physical surfaces. Elevation, shadow, and motion give every element a place in space.</p>
+    <div class="hero-elev-demo">
+      <div class="hero-card hero-card--dp0">
+        <div class="hero-card-dp">dp 0</div>
+        <div class="hero-card-label">Flat</div>
+      </div>
+      <div class="hero-card hero-card--dp2">
+        <div class="hero-card-dp">dp 2</div>
+        <div class="hero-card-label">Card</div>
+      </div>
+      <div class="hero-card hero-card--dp4">
+        <div class="hero-card-dp">dp 4</div>
+        <div class="hero-card-label">Button</div>
+      </div>
+      <div class="hero-card hero-card--dp8">
+        <div class="hero-card-dp">dp 8</div>
+        <div class="hero-card-label">Menu</div>
+      </div>
+      <div class="hero-card hero-card--dp16">
+        <div class="hero-card-dp">dp 16</div>
+        <div class="hero-card-label">Nav</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="section-tag">About This Style</div>
+    <div class="about-cols">
+      <div class="about-block">
+        <p>Material Design was introduced by Google at I/O 2014 as a unified visual language for Android, web, and cross-platform applications. It draws from the physical world — paper, ink, and the laws of physics — to create a coherent system of surfaces that respond to touch and occupy real space.</p>
+        <p>The central metaphor is a stack of physical sheets. Each interface element exists at a specific elevation above the base surface, and that elevation determines its shadow, its relationship to other elements, and how it moves. A card at dp2 casts a soft diffuse shadow; a navigation drawer at dp16 sits assertively above all content.</p>
+      </div>
+      <div class="about-block">
+        <p>The system is rigorously grid-based: an 8dp baseline grid governs all spacing, making layouts inherently consistent. Typography follows a type scale — Display through Caption — all in Roboto, optimised for screen rendering. Colour follows a primary/secondary palette system where each swatch is defined from 50 (near white) to 900 (near black).</p>
+        <p>Motion is a core principle, not an afterthought. Transitions follow arcs, acceleration easing, and shared-axis patterns. The Floating Action Button (FAB) represents the single most important action on a screen — always round, always elevated, always pink (or your secondary colour). Material proved that systematic design could scale across thousands of apps without feeling bland.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characteristics -->
+  <section class="section">
+    <div class="section-tag">Characteristics</div>
+    <div class="chars-grid">
+      <div class="char-item">8dp baseline grid</div>
+      <div class="char-item">Elevation layers (dp 0–24)</div>
+      <div class="char-item">Roboto typeface system</div>
+      <div class="char-item">Primary + secondary palette</div>
+      <div class="char-item">4px border-radius on cards</div>
+      <div class="char-item">Floating Action Button</div>
+      <div class="char-item">Ripple touch feedback</div>
+      <div class="char-item">App bar at top</div>
+      <div class="char-item">Bottom navigation</div>
+      <div class="char-item">Motion with physics</div>
+      <div class="char-item">Color 50–900 scale</div>
+      <div class="char-item">Ink on paper metaphor</div>
+    </div>
+  </section>
+
+  <!-- Palette -->
+  <section class="section">
+    <div class="section-tag">Color Palette</div>
+    <div class="palette-row">
+      <div class="swatch swatch--light" style="background:#FAFAFA"><span>#FAFAFA</span></div>
+      <div class="swatch swatch--light" style="background:#E3F2FD"><span>#E3F2FD</span></div>
+      <div class="swatch" style="background:#1565C0"><span>#1565C0</span></div>
+      <div class="swatch" style="background:#0D47A1"><span>#0D47A1</span></div>
+      <div class="swatch" style="background:#E91E63"><span>#E91E63</span></div>
+      <div class="swatch" style="background:#212121"><span>#212121</span></div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="section">
+    <div class="section-tag">Typography</div>
+    <div class="type-specimens">
+      <div class="type-specimen">
+        <div class="font-label">Display — Roboto Light 300</div>
+        <div class="font-display">The Surface<br>is the UI.</div>
+        <div class="font-alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+      <div class="type-specimen">
+        <div class="font-label">Body — Roboto Regular 400</div>
+        <div class="font-body-rob">In Material Design, typography serves clarity above all. The type scale runs from Display (96sp) down to Overline (10sp) — each cut matched to its purpose, each weight purposeful.</div>
+        <div class="font-body-rob" style="font-size:13px;color:var(--mid)">16sp / line-height 1.5 / Roboto Regular for body, Medium for labels, Bold for titles</div>
+        <div class="font-alphabet">Light · Regular · Medium · Bold · Black</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="section">
+    <div class="section-tag">Components</div>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <div class="comp-label-text">Button</div>
+        <div class="comp-demo">
+          <button class="mat-btn mat-btn--contained">CONTAINED</button>
+          <button class="mat-btn mat-btn--outlined">OUTLINED</button>
+          <button class="mat-btn mat-btn--text-btn">TEXT</button>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Card</div>
+        <div class="comp-demo">
+          <div class="mat-card-demo">
+            <div class="mat-card-demo-media"></div>
+            <div class="mat-card-demo-body">
+              <div class="mat-card-demo-title">Surface Elevation</div>
+              <p class="mat-card-demo-text">This card exists at dp2 — soft shadow, white surface, 4px radius.</p>
+              <div class="mat-card-demo-actions">
+                <button class="mat-btn mat-btn--text-btn">SHARE</button>
+                <button class="mat-btn mat-btn--text-btn">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Input</div>
+        <div class="comp-demo" style="flex-direction:column;width:100%">
+          <div class="mat-field mat-field--filled">
+            <label class="mat-field-label">Email address</label>
+            <input class="mat-field-input" type="text" placeholder="you@example.com">
+          </div>
+          <div class="mat-field mat-field--outlined" style="margin-top:16px">
+            <label class="mat-field-label">Password</label>
+            <input class="mat-field-input" type="text" placeholder="••••••••">
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-label-text">Chips &amp; FAB</div>
+        <div class="comp-demo" style="flex-wrap:wrap;align-items:center">
+          <span class="mat-chip">Design</span>
+          <span class="mat-chip mat-chip--selected">Material</span>
+          <span class="mat-chip">Google</span>
+          <span class="mat-chip">2014</span>
+          <div class="mat-fab-demo">+</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Elevation Demo -->
+  <section class="section">
+    <div class="section-tag">Elevation Demo</div>
+    <div class="elev-demo-grid">
+      <div class="elev-demo-card ed-dp0">
+        <div class="ed-label">dp 0</div>
+        <div class="ed-name">Background</div>
+        <p class="ed-desc">No elevation. The base canvas.</p>
+      </div>
+      <div class="elev-demo-card ed-dp1">
+        <div class="ed-label">dp 1</div>
+        <div class="ed-name">Switch</div>
+        <p class="ed-desc">Barely lifted. Toggle controls.</p>
+      </div>
+      <div class="elev-demo-card ed-dp2">
+        <div class="ed-label">dp 2</div>
+        <div class="ed-name">Card</div>
+        <p class="ed-desc">Default resting state for cards.</p>
+      </div>
+      <div class="elev-demo-card ed-dp4">
+        <div class="ed-label">dp 4</div>
+        <div class="ed-name">App Bar</div>
+        <p class="ed-desc">Top-level navigation surface.</p>
+      </div>
+      <div class="elev-demo-card ed-dp8">
+        <div class="ed-label">dp 8</div>
+        <div class="ed-name">Menu</div>
+        <p class="ed-desc">Dropdown menus and snackbars.</p>
+      </div>
+      <div class="elev-demo-card ed-dp16">
+        <div class="ed-label">dp 16</div>
+        <div class="ed-name">Drawer</div>
+        <p class="ed-desc">Navigation drawers and side panels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="detail-footer">
+    <a href="../index.html">← Back to Catalogue</a>
+    <a href="vaporwave.html">Next: Vaporwave →</a>
+  </footer>
+
+</body>
+</html>
