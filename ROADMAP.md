@@ -1,7 +1,7 @@
 # Web Design Catalogue — Feature Roadmap
 
 A living reference of all candidate styles for future additions.
-Currently implemented: 15 styles (01–15).
+Currently implemented: 16 styles (01–16).
 
 ---
 
@@ -24,6 +24,7 @@ Currently implemented: 15 styles (01–15).
 | 13 | Vaporwave | ✅ Done |
 | 14 | Bauhaus | ✅ Done |
 | 15 | Retrofuturism | ✅ Done |
+| 16 | Broadsheet | ✅ Done |
 
 ---
 

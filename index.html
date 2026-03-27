@@ -6,7 +6,7 @@
   <title>Web Design Catalogue</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700&family=Outfit:wght@200;300;400;600;800&family=Nunito:wght@300;400;600;800&family=Barlow:ital,wght@0,100;0,400;0,700;0,900&family=VT323&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Fredoka+One&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400;500&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700&family=Outfit:wght@200;300;400;600;800&family=Nunito:wght@300;400;600;800&family=Barlow:ital,wght@0,100;0,400;0,700;0,900&family=VT323&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Fredoka+One&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400;500&family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   <nav class="catalogue-nav">
     <span class="catalogue-title">DESIGN CATALOGUE</span>
     <span class="current-style" id="currentStyle">—</span>
-    <span class="style-counter" id="styleCounter">— / 15</span>
+    <span class="style-counter" id="styleCounter">— / 16</span>
   </nav>
 
   <!-- 01 BRUTALISM -->
@@ -534,6 +534,57 @@
     </a>
   </section>
 
+  <!-- 16. Broadsheet -->
+  <section class="style-section" data-style="Broadsheet" data-index="16">
+    <a href="styles/broadsheet.html" class="section-link" aria-label="Explore Broadsheet">
+      <div class="press-preview">
+        <div class="press-spacer"></div>
+        <div class="press-np-bar">
+          <div class="press-np-title">The Broadsheet</div>
+          <div class="press-np-sub">Catalogue of Web Design Styles · Style 16</div>
+        </div>
+        <div class="press-np-rule-red"></div>
+        <div class="press-np-rule-black"></div>
+        <div class="press-meta-bar">
+          <span>Vol. XVI · No. 1</span>
+          <span>Editorial Press</span>
+          <span>Style 16 of 16</span>
+        </div>
+        <div class="press-section-bar">Leading Stories</div>
+        <div class="press-cols">
+          <div class="press-col">
+            <div class="press-col-kicker">Editorial Design</div>
+            <div class="press-col-hed press-col-hed--lg">Two Centuries of Print Grammar</div>
+            <p class="press-col-body">The column grid, the drop cap, the hairline rule — journalism's oldest tools find new purpose on the web. Every element has a job. Nothing is decoration.</p>
+          </div>
+          <div class="press-col-rule"></div>
+          <div class="press-col">
+            <div class="press-col-kicker">Typography</div>
+            <div class="press-col-hed">Playfair Display &amp; Source Serif 4</div>
+            <p class="press-col-body">The editorial serif revival is a recalibration — a recognition that typefaces made for reading are still the best tools for the job.</p>
+            <div class="press-col-divider"></div>
+            <div class="press-col-kicker">Palette</div>
+            <p class="press-col-body">Ink on newsprint, one editorial red. The discipline of its use is part of the style.</p>
+          </div>
+          <div class="press-col-rule"></div>
+          <div class="press-col">
+            <div class="press-col-kicker">Also Noted</div>
+            <div class="press-col-hed">Drop Caps Return</div>
+            <p class="press-col-body">The CSS ::first-letter pseudo-element, long ignored, returns to prominence.</p>
+            <div class="press-col-divider"></div>
+            <div class="press-col-hed">Column Rules in CSS</div>
+            <p class="press-col-body">column-rule, available since 2012, remains one of the least-used properties.</p>
+          </div>
+        </div>
+      </div>
+      <div class="style-label">
+        <span class="style-num">16</span>
+        <span class="style-name">Broadsheet</span>
+        <span class="style-explore">Explore →</span>
+      </div>
+    </a>
+  </section>
+
   <script>
     const sections = document.querySelectorAll('.style-section');
     const currentStyleEl = document.getElementById('currentStyle');
@@ -546,7 +597,7 @@
           const index = entry.target.dataset.index;
           currentStyleEl.textContent = style;
           const padded = String(index).padStart(2, '0');
-          styleCounterEl.textContent = `${padded} / 15`;
+          styleCounterEl.textContent = `${padded} / 16`;
         }
       });
     }, { threshold: 0.5 });

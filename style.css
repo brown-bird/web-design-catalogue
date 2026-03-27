@@ -133,7 +133,7 @@ body {
 .skeu-preview, .memphis-preview,
 .clay-preview, .deco-preview, .bento-preview,
 .mat-preview, .vapor-preview, .haus-preview,
-.retro-preview {
+.retro-preview, .press-preview {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1880,4 +1880,114 @@ body {
   color: rgba(184, 203, 216, 0.65);
   margin-top: 10px;
   text-transform: uppercase;
+}
+
+
+/* ============================================================
+   16 — BROADSHEET
+   ============================================================ */
+.press-preview {
+  background: #F7F3E8;
+  font-family: 'Playfair Display', Georgia, serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.press-spacer { height: 44px; }
+
+.press-np-bar {
+  background: #111111;
+  text-align: center;
+  padding: 10px 20px 12px;
+}
+
+.press-np-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: #F7F3E8;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.press-np-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.18em;
+  color: rgba(247,243,232,0.5);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.press-np-rule-red   { height: 3px; background: #C41E1E; }
+.press-np-rule-black { height: 1px; background: #111111; }
+
+.press-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+  color: #888888;
+  text-transform: uppercase;
+  border-bottom: 1px solid #111111;
+}
+
+.press-section-bar {
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C41E1E;
+  padding: 4px 16px;
+  border-bottom: 1px solid #111111;
+}
+
+.press-cols {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  flex: 1;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.press-col-rule { background: #BDBDBD; }
+
+.press-col { padding: 0 12px; overflow: hidden; }
+
+.press-col-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C41E1E;
+  margin-bottom: 5px;
+}
+
+.press-col-hed {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  margin-bottom: 7px;
+}
+
+.press-col-hed--lg { font-size: 18px; }
+
+.press-col-body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 9px;
+  line-height: 1.65;
+  color: #444444;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.press-col-divider {
+  height: 1px;
+  background: #BDBDBD;
+  margin: 8px 0;
 }
