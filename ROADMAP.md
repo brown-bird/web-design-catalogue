@@ -1,7 +1,7 @@
 # Web Design Catalogue — Feature Roadmap
 
 A living reference of all candidate styles for future additions.
-Currently implemented: 14 styles (01–14).
+Currently implemented: 15 styles (01–15).
 
 ---
 
@@ -23,6 +23,7 @@ Currently implemented: 14 styles (01–14).
 | 12 | Material Design | ✅ Done |
 | 13 | Vaporwave | ✅ Done |
 | 14 | Bauhaus | ✅ Done |
+| 15 | Retrofuturism | ✅ Done |
 
 ---
 
@@ -41,7 +42,7 @@ Well-understood styles that would add variety, but some visual overlap risk with
 | **Y2K / Retro Web** | Early 2000s web nostalgia: beveled buttons, star/flame cursor graphics, Comic Sans, marquee tags, under-construction GIFs. Clear era identity. | Low — distinct from all current entries |
 | **Organic / Blob** | Asymmetric blob shapes as primary design element, soft gradients, flowing curves, no straight lines or sharp corners. Nature-inspired. | Low-medium — shares softness with Claymorphism |
 | **Dark Academia** | Intellectual, gothic-adjacent: deep navy/brown, serif type, parchment textures, candlelight warmth, Victorian illustration aesthetics. | Low — nothing like it in catalogue |
-| **Retrofuturism** | Mid-century vision of the future: chrome, atomic starbursts, Populuxe curves, optimistic space age. Distinct from Cyberpunk (hopeful vs. dystopian). | Medium — shares futurism trope with Cyberpunk |
+| ~~**Retrofuturism**~~ | ~~Mid-century vision of the future: chrome, atomic starbursts, Populuxe curves, optimistic space age. Distinct from Cyberpunk (hopeful vs. dystopian).~~ | ✅ Implemented as style 15 |
 
 ---
 
